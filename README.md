@@ -41,35 +41,21 @@ The data was chunked with the following logic to improve the performance of the 
 
 ## Choice of LLM
 
-| Name | Link | Validation Loss | Accuracy |
-|-------|---------------|-----------------|----------|
-| 1     | 0.373000      | 0.273244        | 93.37%   |
-| 2     | 0.212700      | 0.214763        | 94.05%   |
-| 3     | 0.180100      | 0.191792        | 94.45%   |
-| 4     | 0.144800      | 0.185732        | 94.72%   |
-| 5     | 0.130800      | 0.181368        | 94.45%   |
+| Name | Link |
+|-------|---------------|
+| 1     | platformhttps://ai.google.dev/gemini-api/docs/models/gemini?hl=de#gemini-2.0-flash-lite     |
 
-### TensorBoard
+(Add rows if you combine multiple models or compared their performance.)
 
-Details of training can be found at [Huggingface TensorBoard](https://huggingface.co/kuhs/vit-base-oxford-iiit-pets/tensorboard)
+## Test Method
 
-| Model/Method                                                         | TensorBoard Link                                      |
-|----------------------------------------------------------------------|------------------------------------------------------|
-| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | runs/Feb07_17-31-08_clt-mob-w-2019                    |
-| Transfer Learning with `google/vit-base-patch16-224` (with data augmentation)  | runs/Feb07_17-09-30_clt-mob-w-2019                    |
-
-![alt text](doc/eval.png)
+Detail how you selected or generated the test data and how you evaluated the performance of the model.
 
 ## Results
 
 | Model/Method                                                         | Accuracy | Precision | Recall |
 |----------------------------------------------------------------------|----------|-----------|--------|
-| Transfer Learning with `google/vit-base-patch16-224` (without data augmentation) | 93%      | -         | -      |
-| Transfer Learning with `google/vit-base-patch16-224` (with data augmentation)  | 95%      | -         | -      |
-| Zero-shot Image Classification with `openai/clip-vit-large-patch14` | 88%      | 87.68%    | 88%    |
+|Retrieved chunks with config xyz |  -    | -         | -      |
+| Generated answer with config xyz  | -      | -         | -      |
 
 ## References
-
-![Class Distribution](doc/class_distribution.png)  
-![Dog vs Cat](doc/dog_cat.png)  
-![Sample Prediction (Transfer Learning)](doc/sample_prediction_transferlearning.png)
